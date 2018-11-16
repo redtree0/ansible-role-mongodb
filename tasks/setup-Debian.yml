@@ -18,5 +18,5 @@
   apt_repository: repo='{{ mongodb_repository }}' update_cache=yes
 
 - name: Debian | Install Packages
-  apt: pkg={{ item }} state=installed force=yes
+  apt: pkg={{ item }} state=present force=yes
   with_items: "{{ mongodb_packages }}"
